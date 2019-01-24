@@ -15,6 +15,8 @@ commands:
     windows: python %PROJECT_DIR%\run_with_env_vars.py
 
 
+  plot:
+    notebook: plot.ipynb
 channels: []
 packages: []
 platforms:
@@ -24,12 +26,14 @@ platforms:
 
 env_specs:
   anaconda44_py36:
-    channels: []
+    channels:
+    - https://repo.continuum.io/pkgs/main/linux-64/
     packages:
     - python>=3.6,<3.7
 
+    - spacy
 variables:
   INTEGRATION_TEST_ANACONDA:
-    default: 'anaconda'
+    default: anaconda
   INTEGRATION_TEST_VERSION:
-    default: 'test'
+    default: test
